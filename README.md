@@ -12,7 +12,7 @@ Ce dépôt rassemble des traces GPX destinées au gravel.
 - [Arzon 5](arzon/arzon-5.gpx)
 - [Arzon – Penvins](arzon/arzon-penvins.gpx)
 
-### La Garenne
+### La Garenne-Colombes
 
 - [La Boucle de Seine](la_garenne/la_boucle_de_seine.gpx)
 
