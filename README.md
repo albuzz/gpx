@@ -6,15 +6,16 @@ Ce dépôt rassemble des traces GPX destinées au gravel.
 
 ### Arzon
 
-- [Arzon 1](arzon/arzon-1.gpx)
-- [Arzon 3](arzon/arzon-3.gpx)
-- [Arzon 4](arzon/arzon-4.gpx)
-- [Arzon 5](arzon/arzon-5.gpx)
-- [Arzon – Penvins](arzon/arzon-penvins.gpx)
+- [Arzon – Penvins](arzon/arzon_penvins/route.gpx)
+- [Boucle Arzon 1](arzon/boucle_arzon_1/route.gpx)
+- [Boucle Arzon 3](arzon/boucle_arzon_3/route.gpx)
+- [Boucle Arzon 4](arzon/boucle_arzon_4/route.gpx)
+- [Boucle Arzon 5](arzon/boucle_arzon_5/route.gpx)
+- [Le tour du Golfe](arzon/le_tour_du_golfe/route.gpx)
 
 ### La Garenne-Colombes
 
-- [La Boucle de Seine](la_garenne/la_boucle_de_seine.gpx)
+- [Boucle le long de la Seine](la_garenne/boucle_le_long_de_la_seine/route.gpx)
 
 ## Utilisation
 
