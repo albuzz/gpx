@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Parcours GPX de gravel à Arzon et le long de la Seine, à télécharger pour votre GPS ou application de navigation.">
+  <title>Traces GPX gravel</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #17231d;
+      background: #f3f5ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 4.5rem 1.25rem 3.5rem;
+      color: #fff;
+      background: #174b37;
+    }
+
+    .content {
+      width: min(100% - 2rem, 920px);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.5rem;
+      color: #c4e3ce;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 700px;
+      margin-bottom: 0.75rem;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.1;
+    }
+
+    header p:last-child {
+      max-width: 620px;
+      margin-bottom: 0;
+      color: #e2eee6;
+      font-size: 1.1rem;
+    }
+
+    main {
+      padding-block: 2.5rem 3rem;
+    }
+
+    section + section {
+      margin-top: 2.5rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.55rem;
+    }
+
+    .routes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 1rem;
+    }
+
+    article {
+      display: flex;
+      min-height: 150px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25rem;
+      border: 1px solid #dce4da;
+      border-radius: 0.8rem;
+      background: #fff;
+    }
+
+    article h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.1rem;
+    }
+
+    article p {
+      margin-bottom: 1rem;
+      color: #536158;
+    }
+
+    article a {
+      margin-top: auto;
+      color: #17613f;
+      font-weight: 700;
+      text-underline-offset: 0.2em;
+    }
+
+    .notice {
+      padding: 1.25rem;
+      border-left: 4px solid #6d8b50;
+      border-radius: 0.25rem;
+      background: #e8eee2;
+    }
+
+    .notice p {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding-block: 1.25rem;
+      border-top: 1px solid #dce4da;
+      color: #536158;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="content">
+      <p class="eyebrow">Parcours à vélo</p>
+      <h1>Traces GPX gravel</h1>
+      <p>Des itinéraires à télécharger pour préparer vos sorties à Arzon et le long de la Seine.</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <section aria-labelledby="arzon-heading">
+      <h2 id="arzon-heading">Arzon</h2>
+      <div class="routes">
+        <article>
+          <h3>Arzon – Penvins</h3>
+          <p>Parcours dans le secteur d’Arzon et de Penvins.</p>
+          <a href="arzon/arzon_penvins/route.gpx" download>Télécharger le GPX</a>
+        </article>
+        <article>
+          <h3>Boucle Arzon 1</h3>
+          <p>Boucle au départ d’Arzon.</p>
+          <a href="arzon/boucle_arzon_1/route.gpx" download>Télécharger le GPX</a>
+        </article>
+        <article>
+          <h3>Boucle Arzon 3</h3>
+          <p>Boucle au départ d’Arzon.</p>
+          <a href="arzon/boucle_arzon_3/route.gpx" download>Télécharger le GPX</a>
+        </article>
+        <article>
+          <h3>Boucle Arzon 4</h3>
+          <p>Boucle au départ d’Arzon.</p>
+          <a href="arzon/boucle_arzon_4/route.gpx" download>Télécharger le GPX</a>
+        </article>
+        <article>
+          <h3>Boucle Arzon 5</h3>
+          <p>Boucle au départ d’Arzon.</p>
+          <a href="arzon/boucle_arzon_5/route.gpx" download>Télécharger le GPX</a>
+        </article>
+        <article>
+          <h3>Le tour du Golfe</h3>
+          <p>Un itinéraire autour du Golfe du Morbihan.</p>
+          <a href="arzon/le_tour_du_golfe/route.gpx" download>Télécharger le GPX</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="seine-heading">
+      <h2 id="seine-heading">La Garenne-Colombes</h2>
+      <div class="routes">
+        <article>
+          <h3>Boucle le long de la Seine</h3>
+          <p>Parcours dans le secteur de La Garenne-Colombes et des bords de Seine.</p>
+          <a href="la_garenne/boucle_le_long_de_la_seine/route.gpx" download>Télécharger le GPX</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="notice" aria-labelledby="usage-heading">
+      <h2 id="usage-heading">Avant de partir</h2>
+      <p>Importez le fichier GPX dans votre application de navigation ou votre compteur vélo. Les traces sont indicatives : vérifiez le parcours, les conditions locales et l’accessibilité des chemins avant votre sortie.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="content">
+      <p>Fichiers GPX partagés à titre indicatif.</p>
+    </div>
+  </footer>
+</body>
+</html>
