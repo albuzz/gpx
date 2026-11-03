@@ -19,6 +19,6 @@ Ce dépôt rassemble des traces GPX destinées au gravel.
 
 ## Utilisation
 
-Téléchargez le fichier GPX de votre choix et importez-le dans votre application de navigation ou votre compteur vélo compatible GPX.
+Les parcours sont prévisualisés sur une carte interactive dans la page d’accueil. Les fonds de carte OpenStreetMap nécessitent une connexion Internet. Téléchargez le fichier GPX de votre choix et importez-le dans votre application de navigation ou votre compteur vélo compatible GPX.
 
 Les traces sont fournies à titre indicatif. Avant de partir, vérifiez le parcours, les conditions locales et l’accessibilité des chemins.
