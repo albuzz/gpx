@@ -162,68 +162,12 @@
   <main class="content">
     <section aria-labelledby="arzon-heading">
       <h2 id="arzon-heading">Arzon</h2>
-      <div class="routes">
-        <article>
-          <h3>Arzon – Penvins</h3>
-          <p>Parcours dans le secteur d’Arzon et de Penvins.</p>
-          <div class="map-preview" data-gpx="arzon/arzon_penvins/route.gpx" role="img" aria-label="Carte du parcours Arzon – Penvins" aria-busy="true"></div>
-          <a href="arzon/arzon_penvins/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Boucle Arzon 1</h3>
-          <p>Boucle au départ d’Arzon.</p>
-          <div class="map-preview" data-gpx="arzon/boucle_arzon_1/route.gpx" role="img" aria-label="Carte du parcours Boucle Arzon 1" aria-busy="true"></div>
-          <a href="arzon/boucle_arzon_1/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Boucle Arzon 3</h3>
-          <p>Boucle au départ d’Arzon.</p>
-          <div class="map-preview" data-gpx="arzon/boucle_arzon_3/route.gpx" role="img" aria-label="Carte du parcours Boucle Arzon 3" aria-busy="true"></div>
-          <a href="arzon/boucle_arzon_3/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Boucle Arzon 4</h3>
-          <p>Boucle au départ d’Arzon.</p>
-          <div class="map-preview" data-gpx="arzon/boucle_arzon_4/route.gpx" role="img" aria-label="Carte du parcours Boucle Arzon 4" aria-busy="true"></div>
-          <a href="arzon/boucle_arzon_4/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Boucle Arzon 5</h3>
-          <p>Boucle au départ d’Arzon.</p>
-          <div class="map-preview" data-gpx="arzon/boucle_arzon_5/route.gpx" role="img" aria-label="Carte du parcours Boucle Arzon 5" aria-busy="true"></div>
-          <a href="arzon/boucle_arzon_5/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Le tour du Golfe</h3>
-          <p>Un itinéraire autour du Golfe du Morbihan.</p>
-          <div class="map-preview" data-gpx="arzon/le_tour_du_golfe/route.gpx" role="img" aria-label="Carte du parcours Le tour du Golfe" aria-busy="true"></div>
-          <a href="arzon/le_tour_du_golfe/route.gpx" download>Télécharger le GPX</a>
-        </article>
-      </div>
+      <div class="routes" id="arzon-routes"></div>
     </section>
 
     <section aria-labelledby="seine-heading">
       <h2 id="seine-heading">La Garenne-Colombes</h2>
-      <div class="routes">
-        <article>
-          <h3>Boucle le long de la Seine</h3>
-          <p>Parcours dans le secteur de La Garenne-Colombes et des bords de Seine.</p>
-          <div class="map-preview" data-gpx="la_garenne/boucle_le_long_de_la_seine/route.gpx" role="img" aria-label="Carte du parcours Boucle le long de la Seine" aria-busy="true"></div>
-          <a href="la_garenne/boucle_le_long_de_la_seine/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Boucle Sud de Paris</h3>
-          <p>Parcours dans le secteur de La Garenne-Colombes et des bords de Seine.</p>
-          <div class="map-preview" data-gpx="la_garenne/boucle_sud_de_paris/route.gpx" role="img" aria-label="Carte du parcours Boucle le long de la Seine" aria-busy="true"></div>
-          <a href="la_garenne/boucle_sud_de_paris/route.gpx" download>Télécharger le GPX</a>
-        </article>
-        <article>
-          <h3>Boucle dans le Vexin</h3>
-          <p>Parcours dans le secteur de La Garenne-Colombes et des bords de Seine.</p>
-          <div class="map-preview" data-gpx="la_garenne/boucle_vexin_108km/route.gpx" role="img" aria-label="Carte du parcours Boucle le long de la Seine" aria-busy="true"></div>
-          <a href="la_garenne/boucle_vexin_108km/route.gpx" download>Télécharger le GPX</a>
-        </article>
-      </div>
+      <div class="routes" id="seine-routes"></div>
     </section>
 
     <section class="notice" aria-labelledby="usage-heading">
@@ -240,9 +184,73 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
   <script>
-    const previews = document.querySelectorAll(".map-preview");
+    const routeGroups = [
+      {
+        container: document.querySelector("#arzon-routes"),
+        files: [
+          "arzon/arzon_penvins/route.gpx",
+          "arzon/boucle_arzon_1/route.gpx",
+          "arzon/boucle_arzon_3/route.gpx",
+          "arzon/boucle_arzon_4/route.gpx",
+          "arzon/boucle_arzon_5/route.gpx",
+          "arzon/le_tour_du_golfe/route.gpx"
+        ]
+      },
+      {
+        container: document.querySelector("#seine-routes"),
+        files: [
+          "la_garenne/boucle_le_long_de_la_seine/route.gpx",
+          "la_garenne/boucle_sud_de_paris/route.gpx",
+          "la_garenne/boucle_vexin_108km/route.gpx"
+        ]
+      }
+    ];
 
-    previews.forEach((element) => {
+    function readRouteMetadata(gpx) {
+      const gpxDocument = new DOMParser().parseFromString(gpx, "application/xml");
+      if (gpxDocument.querySelector("parsererror")) {
+        throw new Error("Impossible de lire les métadonnées du parcours.");
+      }
+
+      const metadata = gpxDocument.getElementsByTagNameNS("*", "metadata")[0];
+      const name = Array.from(metadata?.children || []).find((child) => child.localName === "name")?.textContent.trim();
+      const description = Array.from(metadata?.children || []).find((child) => child.localName === "desc")?.textContent.trim();
+      if (!name) {
+        throw new Error("Le nom du parcours est absent de ses métadonnées.");
+      }
+
+      return { name, description };
+    }
+
+    function createRouteArticle(file, name, description) {
+      const article = document.createElement("article");
+      const heading = document.createElement("h3");
+      heading.textContent = name;
+      article.append(heading);
+
+      if (description) {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = description;
+        article.append(paragraph);
+      }
+
+      const mapPreview = document.createElement("div");
+      mapPreview.className = "map-preview";
+      mapPreview.setAttribute("role", "img");
+      mapPreview.setAttribute("aria-label", `Carte du parcours ${name}`);
+      mapPreview.setAttribute("aria-busy", "true");
+      article.append(mapPreview);
+
+      const downloadLink = document.createElement("a");
+      downloadLink.href = file;
+      downloadLink.download = "";
+      downloadLink.textContent = "Télécharger le GPX";
+      article.append(downloadLink);
+
+      return { article, mapPreview };
+    }
+
+    function showRouteMap(element, gpx) {
       const map = L.map(element, { scrollWheelZoom: false });
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -254,45 +262,76 @@
       status.textContent = "Chargement du parcours…";
       element.append(status);
 
-      fetch(element.dataset.gpx)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Impossible de charger le GPX (${response.status}).`);
-          }
-          return response.text();
-        })
-        .then((gpx) => new L.GPX(gpx, {
-          async: true,
-          marker_options: { startIconUrl: null, endIconUrl: null },
-          polyline_options: { color: "#17613f", weight: 4 },
-          gpx_options: { parseElements: ["track", "route"] }
-        })
-          .on("loaded", (event) => {
-            const route = event.target;
-            const stats = document.createElement("p");
-            const distance = new Intl.NumberFormat("fr-FR", {
-              minimumFractionDigits: 1,
-              maximumFractionDigits: 1
-            }).format(route.get_distance() / 1000);
-            const elevationGain = new Intl.NumberFormat("fr-FR", {
-              maximumFractionDigits: 0
-            }).format(route.get_elevation_gain());
-            stats.className = "route-stats";
-            stats.textContent = `Distance : ${distance} km · Dénivelé : ${elevationGain} m`;
-            element.after(stats);
-            map.fitBounds(route.getBounds(), { padding: [12, 12] });
-            element.setAttribute("aria-busy", "false");
-            status.remove();
-          })
-          .on("error", (event) => {
-            status.textContent = event.err || "Impossible de charger le parcours.";
-            element.setAttribute("aria-busy", "false");
-          })
-          .addTo(map))
-        .catch((error) => {
-          status.textContent = error.message;
+      new L.GPX(gpx, {
+        async: true,
+        marker_options: { startIconUrl: null, endIconUrl: null },
+        polyline_options: { color: "#17613f", weight: 4 },
+        gpx_options: { parseElements: ["track", "route"] }
+      })
+        .on("loaded", (event) => {
+          const route = event.target;
+          const stats = document.createElement("p");
+          const distance = new Intl.NumberFormat("fr-FR", {
+            minimumFractionDigits: 1,
+            maximumFractionDigits: 1
+          }).format(route.get_distance() / 1000);
+          const elevationGain = new Intl.NumberFormat("fr-FR", {
+            maximumFractionDigits: 0
+          }).format(route.get_elevation_gain());
+          stats.className = "route-stats";
+          stats.textContent = `Distance : ${distance} km · Dénivelé : ${elevationGain} m`;
+          element.after(stats);
+          map.fitBounds(route.getBounds(), { padding: [12, 12] });
           element.setAttribute("aria-busy", "false");
+          status.remove();
+        })
+        .on("error", (event) => {
+          status.textContent = event.err || "Impossible de charger le parcours.";
+          element.setAttribute("aria-busy", "false");
+        })
+        .addTo(map);
+    }
+
+    async function loadRoute(file) {
+      try {
+        const response = await fetch(file);
+        if (!response.ok) {
+          throw new Error(`Impossible de charger le GPX (${response.status}).`);
+        }
+
+        const gpx = await response.text();
+        const metadata = readRouteMetadata(gpx);
+        return { file, gpx, metadata };
+      } catch (error) {
+        return { file, error };
+      }
+    }
+
+    routeGroups.forEach(({ container, files }) => {
+      Promise.all(files.map(loadRoute)).then((routes) => {
+        routes.forEach(({ file, gpx, metadata, error }) => {
+          if (error) {
+            const article = document.createElement("article");
+            const heading = document.createElement("h3");
+            heading.textContent = "Parcours indisponible";
+            const message = document.createElement("p");
+            message.textContent = error.message;
+            article.append(heading, message);
+
+            const downloadLink = document.createElement("a");
+            downloadLink.href = file;
+            downloadLink.download = "";
+            downloadLink.textContent = "Télécharger le GPX";
+            article.append(downloadLink);
+            container.append(article);
+            return;
+          }
+
+          const { article, mapPreview } = createRouteArticle(file, metadata.name, metadata.description);
+          container.append(article);
+          showRouteMap(mapPreview, gpx);
         });
+      });
     });
   </script>
 </body>
