@@ -16,6 +16,8 @@ Ce dépôt rassemble des traces GPX destinées au gravel.
 ### La Garenne-Colombes
 
 - [Boucle le long de la Seine](la_garenne/boucle_le_long_de_la_seine/route.gpx)
+- [Boucle dans le Sud de Paris](la_garenne/boucle_sud_de_paris/route.gpx)
+- [Boucle Nord - 108 km](la_garenne/boucle_vexin_108km/route.gpx)
 
 ## Utilisation
 
